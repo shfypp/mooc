@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private MarqueeText mMarqueeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        mMarqueeText= (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
+        mMarqueeText.setText(Article.articleContent[0]);
     }
 
     @Override
