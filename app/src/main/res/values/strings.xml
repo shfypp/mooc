@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AndroidMooc</string>
     <string name="action_settings">Settings</string>
-    <string name="input_you_key_words">请输入您要搜索的关键词</string>
+    <string name="input_your_key_word">请输入您要搜索的关键词</string>
+    <string name="input_your_key_words">请输入多个关键词，逗号分隔</string>
 </resources>

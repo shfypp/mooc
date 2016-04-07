@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,6 +19,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private MarqueeText mMarqueeText;
     private AutoCompleteTextView mAutoCompleteTextView;
+    private MultiAutoCompleteTextView mMultiAutoCompleteTextView;
+
 
 
     @Override
@@ -36,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //跑马灯TextView的实现
         mMarqueeText= (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
         mMarqueeText.setText(Article.articleContent[0]);
+
+        //自动补全TextView的实现
         //1.初始化控件
         mAutoCompleteTextView= (AutoCompleteTextView) findViewById(R.id.key_words_ac_text_view);
         //2.初始化数据
@@ -49,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 data);
         //4.关联适配器到控件
         mAutoCompleteTextView.setAdapter(adapter);
+
+        //多输入自动补全TextView的实现
+        mMultiAutoCompleteTextView= (MultiAutoCompleteTextView) findViewById(R.id.key_words_mac_text_view);
+        mMultiAutoCompleteTextView.setAdapter(adapter);
+        //设置以逗号为分隔符
+        mMultiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+
+
     }
 
     @Override

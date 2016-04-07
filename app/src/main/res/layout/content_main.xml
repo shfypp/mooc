@@ -26,13 +26,20 @@
             android:focusableInTouchMode="true"
             android:singleLine="true"
             android:text="Hello World!" />
+
         <AutoCompleteTextView
             android:id="@+id/key_words_ac_text_view"
-            android:hint="@string/input_you_key_words"
-            android:completionThreshold="3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:completionThreshold="3"
+            android:hint="@string/input_your_key_word" />
         <!--completionThreshold 设置输入几个字符时开始自动匹配 -->
+        <MultiAutoCompleteTextView
+            android:id="@+id/key_words_mac_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:completionThreshold="3"
+            android:hint="@string/input_your_key_words" />
     </LinearLayout>
 
 </ScrollView>
