@@ -10,7 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private MarqueeText mMarqueeText;
     private AutoCompleteTextView mAutoCompleteTextView;
     private MultiAutoCompleteTextView mMultiAutoCompleteTextView;
-
+    private ToggleButton mToggleButton;
+    private ImageView mImageView;
 
 
     @Override
@@ -61,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
         mMultiAutoCompleteTextView.setAdapter(adapter);
         //设置以逗号为分隔符
         mMultiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+
+        //ToggleButton的实现
+        mImageView= (ImageView) findViewById(R.id.light_image_view);
+        mToggleButton= (ToggleButton) findViewById(R.id.light_switch_tg_button);
+        
+        mToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mImageView.setImageResource(isChecked? R.drawable.light_switch_on:R.drawable.light_switch_off);
+            }
+        });
 
 
     }
