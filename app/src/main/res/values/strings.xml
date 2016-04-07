@@ -5,4 +5,5 @@
     <string name="input_your_key_words">请输入多个关键词，逗号分隔</string>
     <string name="light_on">开灯</string>
     <string name="light_off">关灯</string>
+    <string name="show_image">显示图片</string>
 </resources>

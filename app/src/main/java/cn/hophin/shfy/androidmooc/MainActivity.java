@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private MultiAutoCompleteTextView mMultiAutoCompleteTextView;
     private ToggleButton mToggleButton;
     private ImageView mImageView;
+    private CheckBox mCheckBox;
+    private ImageView mImageView2;
 
 
     @Override
@@ -69,11 +72,21 @@ public class MainActivity extends AppCompatActivity {
         //ToggleButton的实现
         mImageView= (ImageView) findViewById(R.id.light_image_view);
         mToggleButton= (ToggleButton) findViewById(R.id.light_switch_tg_button);
-        
+
         mToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 mImageView.setImageResource(isChecked? R.drawable.light_switch_on:R.drawable.light_switch_off);
+            }
+        });
+
+        //CheckBox的实现
+        mImageView2 = (ImageView) findViewById(R.id.light_image_view_2);
+        mCheckBox= (CheckBox) findViewById(R.id.light_image_show_check_box);
+        mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mImageView2.setVisibility(isChecked?View.VISIBLE:View.INVISIBLE);
             }
         });
 
