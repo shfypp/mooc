@@ -5,12 +5,20 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private MarqueeText mMarqueeText;
+    private AutoCompleteTextView mAutoCompleteTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
         mMarqueeText= (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
         mMarqueeText.setText(Article.articleContent[0]);
+        //1.初始化控件
+        mAutoCompleteTextView= (AutoCompleteTextView) findViewById(R.id.key_words_ac_text_view);
+        //2.初始化数据
+        List<String> data=new ArrayList<String>(Arrays.asList(Article.keyWords));
+        //3.创建适配器
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                data);
+        //4.关联适配器到控件
+        mAutoCompleteTextView.setAdapter(adapter);
     }
 
     @Override

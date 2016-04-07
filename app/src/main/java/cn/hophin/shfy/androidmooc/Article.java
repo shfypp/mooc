@@ -10,4 +10,10 @@ public class Article {
                     "This is a pao ma deng xiao guo can show long string in a single line ",
             ""
     };
+    public static String[] keyWords={
+            "Bei",
+            "Beijing",
+            "Beijingtian",
+            "Beijingtiananmen"
+    };
 }
