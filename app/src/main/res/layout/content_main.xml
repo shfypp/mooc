@@ -75,6 +75,55 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent" />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:id="@+id/sex_radio_group"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/sex_man_radio_button"
+                    android:checked="true"
+                    android:text="@string/sex_man"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/sex_woman_radio_button"
+                    android:checked="false"
+                    android:text="@string/sex_woman"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/device_radio_group"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/device_android_radio_button"
+                    android:checked="true"
+                    android:text="@string/device_android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/device_mac_radio_button"
+                    android:checked="false"
+                    android:text="@string/device_mac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </ScrollView>

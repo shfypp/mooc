@@ -6,4 +6,8 @@
     <string name="light_on">开灯</string>
     <string name="light_off">关灯</string>
     <string name="show_image">显示图片</string>
+    <string name="sex_man">男</string>
+    <string name="sex_woman">女</string>
+    <string name="device_android">安卓</string>
+    <string name="device_mac">苹果</string>
 </resources>
