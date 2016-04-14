@@ -10,4 +10,6 @@
     <string name="sex_woman">女</string>
     <string name="device_android">安卓</string>
     <string name="device_mac">苹果</string>
+    <string name="list_array">ListArray</string>
+    <string name="title_activity_list_array">ListArrayActivity</string>
 </resources>

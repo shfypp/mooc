@@ -1,6 +1,7 @@
 package cn.hophin.shfy.androidmooc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -169,5 +170,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**Response for button list_array**/
+    public void listArray(View view){
+        Intent intent=new Intent(context,ListArrayActivity.class);
+        startActivity(intent);
     }
 }
