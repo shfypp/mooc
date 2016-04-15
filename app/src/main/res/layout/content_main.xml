@@ -148,20 +148,23 @@
                 android:onClick="listArray"
                 android:text="@string/list_array"
                 android:textAllCaps="false" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/date_picker_and_time_picker_button"
                 android:onClick="dateTimePicker"
+                android:text="@string/date_picker_and_time_picker_button"
                 android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="gridView"
+                android:text="@string/grid_view_button"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
 

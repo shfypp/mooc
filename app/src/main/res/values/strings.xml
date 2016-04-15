@@ -14,8 +14,10 @@
     <string name="title_activity_list_array">ListArrayActivity</string>
     <string name="simple_adapter_radio_button">SimpleAdapter</string>
     <string name="array_adapter_radio_button">ArrayAdapter</string>
-    <string name="date_picker_and_time_picker_button">DatePickerAndTimePicker</string>
+    <string name="date_picker_and_time_picker_button">DateAndTime</string>
     <string name="title_activity_date_and_time_picker">DateAndTimePickerActivity</string>
     <string name="dialog_date_picker_button">DatePickerDialog</string>
     <string name="dialog_time_picker_button">TimePickerDialog</string>
+    <string name="grid_view_button">GridView</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
 </resources>

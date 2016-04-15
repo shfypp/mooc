@@ -3,8 +3,6 @@ package cn.hophin.shfy.androidmooc;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -51,15 +49,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         //跑马灯TextView的实现
         mMarqueeText= (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
@@ -177,9 +166,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,ListArrayActivity.class);
         startActivity(intent);
     }
+
     /**Response for button date_and_time_picker_button**/
     public void dateTimePicker(View view){
         Intent intent=new Intent(context,DateAndTimePickerActivity.class);
         startActivity(intent);
     }
+
+    /**Response for button grid_view_button**/
+    public void gridView(View view){
+        Intent intent=new Intent(context,GridViewActivity.class);
+        startActivity(intent);
+    }
+
 }
