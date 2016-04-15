@@ -177,4 +177,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,ListArrayActivity.class);
         startActivity(intent);
     }
+    /**Response for button date_and_time_picker_button**/
+    public void dateTimePicker(View view){
+        Intent intent=new Intent(context,DateAndTimePickerActivity.class);
+        startActivity(intent);
+    }
 }

@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="ArrayAdapter" />
+                android:text="@string/array_adapter_radio_button" />
 
             <RadioButton
                 android:id="@+id/simple_adapter_radio_button"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="false"
-                android:text="ArrayAdapter" />
+                android:text="@string/simple_adapter_radio_button" />
 
         </RadioGroup>
     </LinearLayout>

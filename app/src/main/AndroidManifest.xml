@@ -27,6 +27,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cn.hophin.shfy.androidmooc.MainActivity" />
         </activity>
+        <activity
+            android:name=".DateAndTimePickerActivity"
+            android:label="@string/title_activity_date_and_time_picker"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.hophin.shfy.androidmooc.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

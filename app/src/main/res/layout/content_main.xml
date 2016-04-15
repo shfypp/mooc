@@ -40,99 +40,128 @@
             android:layout_height="wrap_content"
             android:completionThreshold="3"
             android:hint="@string/input_your_key_words" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/light_image_view"
-                android:src="@drawable/light_switch_off"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="60dp"
+                android:src="@drawable/light_switch_off" />
+
             <ToggleButton
                 android:id="@+id/light_switch_tg_button"
-                android:checked="false"
-                android:textOn="@string/light_off"
-                android:textOff="@string/light_on"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="match_parent" />
+                android:checked="false"
+                android:textOff="@string/light_on"
+                android:textOn="@string/light_off" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/light_image_view_2"
-                android:src="@drawable/light_switch_off"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp" />
+                android:layout_height="60dp"
+                android:src="@drawable/light_switch_off" />
+
             <CheckBox
                 android:id="@+id/light_image_show_check_box"
-                android:checked="true"
-                android:text="@string/show_image"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_height="match_parent" />
+                android:checked="true"
+                android:text="@string/show_image" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <RadioGroup
                 android:id="@+id/sex_radio_group"
-                android:orientation="horizontal"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/sex_man_radio_button"
-                    android:checked="true"
-                    android:text="@string/sex_man"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+                    android:checked="true"
+                    android:text="@string/sex_man" />
+
                 <RadioButton
                     android:id="@+id/sex_woman_radio_button"
-                    android:checked="false"
-                    android:text="@string/sex_woman"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content" />
+                    android:checked="false"
+                    android:text="@string/sex_woman" />
 
             </RadioGroup>
+
             <RadioGroup
                 android:id="@+id/device_radio_group"
-                android:orientation="vertical"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
+
                 <RadioButton
                     android:id="@+id/device_android_radio_button"
-                    android:checked="true"
-                    android:text="@string/device_android"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/device_android" />
+
                 <RadioButton
                     android:id="@+id/device_mac_radio_button"
-                    android:checked="false"
-                    android:text="@string/device_mac"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/device_mac" />
             </RadioGroup>
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <Button
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/list_array"
-                android:textAllCaps="false"
                 android:onClick="listArray"
-                android:layout_height="wrap_content" />
+                android:text="@string/list_array"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/date_picker_and_time_picker_button"
+                android:onClick="dateTimePicker"
+                android:textAllCaps="false" />
         </LinearLayout>
 
 
