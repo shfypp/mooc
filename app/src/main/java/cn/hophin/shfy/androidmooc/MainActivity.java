@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup device;
     private RadioButton device_android;
     private RadioButton device_mac;
+    private Spinner spinner;
 
     public MainActivity() {
         this.context = this;
@@ -80,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         mToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mImageView.setImageResource(isChecked? R.drawable.light_switch_on:R.drawable.light_switch_off);
+                mImageView.setImageResource(isChecked ? R.drawable.light_switch_on : R.drawable.light_switch_off);
             }
         });
 
@@ -135,6 +138,41 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Spinner实现下拉列表
+        spinner= (Spinner) findViewById(R.id.cities_spinner);
+        //准备数据
+        final String[] arrayData={
+                "option1",
+                "option2",
+                "option3",
+                "option4",
+                "option5"
+        };
+        List<String> listData=Arrays.asList(arrayData);
+        //封装数据到适配器
+        ArrayAdapter spinnerAdapter=new ArrayAdapter(
+                context,
+                android.R.layout.simple_spinner_item,
+                listData
+        );
+        //为Spinner的Adapter设置一个下拉列表样式
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //添加适配器到Spinner
+        spinner.setAdapter(spinnerAdapter);
+        //添加监听
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(context,arrayData[position],Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
 
     }

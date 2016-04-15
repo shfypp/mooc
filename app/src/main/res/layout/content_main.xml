@@ -166,6 +166,16 @@
                 android:textAllCaps="false" />
 
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/cities_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
 
 
     </LinearLayout>
