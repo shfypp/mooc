@@ -16,6 +16,9 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <cn.hophin.shfy.androidmooc.MarqueeText
             android:id="@+id/pao_ma_deng_text_view"
@@ -152,6 +155,7 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:onClick="dateTimePicker"
                 android:text="@string/date_picker_and_time_picker_button"
@@ -160,21 +164,34 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:onClick="gridView"
                 android:text="@string/grid_view_button"
                 android:textAllCaps="false" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
-            android:minHeight="?android:attr/listPreferredItemHeight"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:orientation="horizontal">
+
             <Spinner
                 android:id="@+id/cities_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="progressBar"
+                android:text="@string/progress_bar_button"
+                android:textAllCaps="false" />
         </LinearLayout>
 
 

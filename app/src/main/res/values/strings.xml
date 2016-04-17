@@ -20,4 +20,7 @@
     <string name="dialog_time_picker_button">TimePickerDialog</string>
     <string name="grid_view_button">GridView</string>
     <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="progress_bar_button">ProgressBar</string>
+    <string name="title_activity_probress_bar">ProbressBarActivity</string>
+    <string name="progressbar_dialog">对话框形式的进度条</string>
 </resources>

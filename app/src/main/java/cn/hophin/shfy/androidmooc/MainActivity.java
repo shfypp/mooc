@@ -217,4 +217,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**Response for button progress_bar**/
+    public void progressBar(View view){
+        Intent intent=new Intent(context,ProgressBarActivity.class);
+        startActivity(intent);
+    }
+
 }
