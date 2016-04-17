@@ -192,6 +192,15 @@
                 android:onClick="progressBar"
                 android:text="@string/progress_bar_button"
                 android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="webView"
+                android:text="@string/web_view_button"
+                android:textAllCaps="false" />
+
         </LinearLayout>
 
 

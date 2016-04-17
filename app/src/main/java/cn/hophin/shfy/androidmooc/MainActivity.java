@@ -222,5 +222,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,ProgressBarActivity.class);
         startActivity(intent);
     }
+    /**Response for button web_view**/
+    public void webView(View view){
+        Intent intent=new Intent(context,WebViewActivity.class);
+        startActivity(intent);
+    }
 
 }
