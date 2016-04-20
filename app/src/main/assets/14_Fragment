@@ -1,0 +1,27 @@
+静态加载
+    android:name    定义layout中实例化的Fragment类
+    标识Fragment的方法：
+                        android:id
+                        android:tag
+动态加载
+    StaticFragmentContentActivity fragment=new StaticFragmentContentActivity();
+    FragmentManager fragmentManager=getFragmentManager();
+    fragmentManager
+            .beginTransaction()
+            .add(R.id.content_linear_layout,fragment )
+            .addToBackStack(null)
+            .commit();
+Fragment与Activity通信
+    getActivity()   //获取所在的Activity
+    getFragmentManager()
+        .findFragmentById()
+        或者
+        .findFragmentByTag()    //获取Fragment
+    Activity传递数据到Fragment
+        创建Bundle封住数据
+        获取Fragment
+        调用Fragment.setArguments(Bundle bundle)方法
+    Fragment传递数据到Activity
+        Fragment中定义回调接口
+        Activity中实现该接口
+        Fragment中调用实现方法传递参数

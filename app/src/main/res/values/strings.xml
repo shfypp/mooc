@@ -25,4 +25,9 @@
     <string name="progressbar_dialog">对话框形式的进度条</string>
     <string name="web_view_button">WebView</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="fragment_button">Fragment</string>
+    <string name="title_activity_use_fragment">UseFragmentActivity</string>
+    <string name="title_activity_static_fragment">StaticFragmentActivity</string>
+    <string name="static_fragment_radio_button">StaticFragment</string>
+    <string name="dynamic_fragment_radio_button_text">DynamicFragment</string>
 </resources>

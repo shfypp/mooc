@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         spinner= (Spinner) findViewById(R.id.cities_spinner);
         //准备数据
         final String[] arrayData={
+                "==PleaseSelect==",
                 "option1",
                 "option2",
                 "option3",
@@ -164,7 +165,10 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(context,arrayData[position],Toast.LENGTH_SHORT).show();
+                //添加判断，默认选择0位置时不弹出Toast
+                if(position!=0) {
+                    Toast.makeText(context, arrayData[position], Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
@@ -225,6 +229,11 @@ public class MainActivity extends AppCompatActivity {
     /**Response for button web_view**/
     public void webView(View view){
         Intent intent=new Intent(context,WebViewActivity.class);
+        startActivity(intent);
+    }
+    /**Response for use_fragment_button**/
+    public void useFragment(View view){
+        Intent intent=new Intent(context,UseFragmentActivity.class);
         startActivity(intent);
     }
 
