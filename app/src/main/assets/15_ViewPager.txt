@@ -1,0 +1,10 @@
+将Layout布局转换成View对象
+    1.  LayoutInflater layoutInflater=getLayoutInflater().from(this);
+        layoutInflater.inflate(resource,root);
+    2.  View.inflate(context,resource,root);
+配置适配器
+    1.  PagerAdapter    List<View>
+    2.  FragmentPagerAdapter    List<Fragment>
+    3.  FragmentStatePagerAdapter   List<Fragment>
+fg: FragmentPagerAdapter加载所有Fragment，左右滑动时不销毁
+    FragmentStatePagerAdapter 类似PagerAdapter 左右滑动时管理Fragment的创建和销毁

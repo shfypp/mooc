@@ -215,6 +215,24 @@
                 android:onClick="useFragment"
                 android:text="@string/fragment_button"
                 android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useViewPager"
+                android:text="@string/view_pager_button"
+                android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:text="@string/view_pager2_button"
+                android:onClick="useViewPager2"
+                android:textAllCaps="false" />
+
+
         </LinearLayout>
 
 

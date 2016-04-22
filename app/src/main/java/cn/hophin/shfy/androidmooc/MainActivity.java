@@ -236,5 +236,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,UseFragmentActivity.class);
         startActivity(intent);
     }
+    /**Response for use_view_pager button**/
+    public void useViewPager(View view){
+        Intent intent=new Intent(context,ViewPagerActivity.class);
+        startActivity(intent);
+    }
+    /**Response for use_view_pager2 button**/
+    public void useViewPager2(View view){
+        Intent intent=new Intent(context,ViewPager2Activity.class);
+        startActivity(intent);
+    }
 
 }

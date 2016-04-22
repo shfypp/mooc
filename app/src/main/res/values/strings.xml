@@ -30,4 +30,8 @@
     <string name="title_activity_static_fragment">StaticFragmentActivity</string>
     <string name="static_fragment_radio_button">StaticFragment</string>
     <string name="dynamic_fragment_radio_button_text">DynamicFragment</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="view_pager_button">ViewPager</string>
+    <string name="title_activity_view_pager2">ViewPager2Activity</string>
+    <string name="view_pager2_button">ViewPager2</string>
 </resources>
