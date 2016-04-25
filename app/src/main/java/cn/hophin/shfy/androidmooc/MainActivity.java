@@ -247,4 +247,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**Response for use_view_flipper_button**/
+    public void useViewFlipper(View view){
+        Intent intent=new Intent(context,ViewFlipperActivity.class);
+        startActivity(intent);
+    }
+
 }

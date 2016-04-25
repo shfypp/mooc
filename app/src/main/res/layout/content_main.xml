@@ -16,6 +16,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -181,8 +182,8 @@
             <Spinner
                 android:id="@+id/cities_spinner"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
 
             <Button
                 android:layout_width="0dp"
@@ -192,6 +193,7 @@
                 android:onClick="progressBar"
                 android:text="@string/progress_bar_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -204,9 +206,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -215,6 +218,7 @@
                 android:onClick="useFragment"
                 android:text="@string/fragment_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -223,18 +227,34 @@
                 android:onClick="useViewPager"
                 android:text="@string/view_pager_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="1dp"
                 android:layout_weight="1"
-                android:text="@string/view_pager2_button"
                 android:onClick="useViewPager2"
+                android:text="@string/view_pager2_button"
                 android:textAllCaps="false" />
 
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useViewFlipper"
+                android:text="@string/view_flipper_button"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
