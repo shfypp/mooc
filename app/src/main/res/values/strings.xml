@@ -38,4 +38,9 @@
     <string name="title_activity_view_flipper">ViewFlipperActivity</string>
     <string name="title_activity_gallery">GalleryActivity</string>
     <string name="title_activity_seek_bar">SeekBarActivity</string>
+    <string name="toast_button">Toast</string>
+    <string name="title_activity_toast">ToastActivity</string>
+    <string name="toast_standard">普通Toast</string>
+    <string name="toast_my_position">显示自定义位置的Toast</string>
+    <string name="toast_with_image">显示图片的Toast</string>
 </resources>

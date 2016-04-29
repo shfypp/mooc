@@ -262,6 +262,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,SeekBarActivity.class);
         startActivity(intent);
     }
+    /**Response for use_toast_button**/
+    public void useToast(View view){
+        Intent intent=new Intent(context,ToastActivity.class);
+        startActivity(intent);
+    }
+
 
 
 

@@ -273,6 +273,40 @@
 
 
         </LinearLayout>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useToast"
+                android:text="@string/toast_button"
+                android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useGalleryAndImageSwitcher"
+                android:text="Gallery"
+                android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useSeekBar"
+                android:text="SeekBar"
+                android:textAllCaps="false" />
+
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
