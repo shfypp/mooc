@@ -257,5 +257,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,GalleryActivity.class);
         startActivity(intent);
     }
+    /**Response for use_seek_bar_button**/
+    public void useSeekBar(View view){
+        Intent intent=new Intent(context,SeekBarActivity.class);
+        startActivity(intent);
+    }
+
+
 
 }
