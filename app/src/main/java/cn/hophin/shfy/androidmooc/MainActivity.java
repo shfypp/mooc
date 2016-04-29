@@ -252,5 +252,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,ViewFlipperActivity.class);
         startActivity(intent);
     }
+    /**Response for use_gallery_and_image_switcher_button**/
+    public void useGalleryAndImageSwitcher(View view){
+        Intent intent=new Intent(context,GalleryActivity.class);
+        startActivity(intent);
+    }
 
 }

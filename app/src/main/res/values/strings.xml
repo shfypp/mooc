@@ -36,4 +36,5 @@
     <string name="view_pager2_button">ViewPager2</string>
     <string name="view_flipper_button">ViewFlipper</string>
     <string name="title_activity_view_flipper">ViewFlipperActivity</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
 </resources>
