@@ -43,4 +43,11 @@
     <string name="toast_standard">普通Toast</string>
     <string name="toast_my_position">显示自定义位置的Toast</string>
     <string name="toast_with_image">显示图片的Toast</string>
+    <string name="dialog_button">Dialog</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    <string name="dialog_yes">确认对话框</string>
+    <string name="dialog_single_choice">单选对话框</string>
+    <string name="dialog_mutual_choice">多选对话框</string>
+    <string name="dialog_list">列表对话框</string>
+    <string name="dialog_my">自定义对话框</string>
 </resources>

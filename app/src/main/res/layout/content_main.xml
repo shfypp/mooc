@@ -291,8 +291,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="1dp"
                 android:layout_weight="1"
-                android:onClick="useGalleryAndImageSwitcher"
-                android:text="Gallery"
+                android:onClick="useDialog"
+                android:text="@string/dialog_button"
                 android:textAllCaps="false" />
             <Button
                 android:layout_width="0dp"

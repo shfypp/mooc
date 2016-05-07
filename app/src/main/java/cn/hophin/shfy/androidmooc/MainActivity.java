@@ -267,6 +267,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,ToastActivity.class);
         startActivity(intent);
     }
+    /**Response for use_dialog_button**/
+    public void useDialog(View view){
+        Intent intent=new Intent(context,DialogActivity.class);
+        startActivity(intent);
+    }
+
 
 
 
