@@ -157,6 +157,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cn.hophin.shfy.androidmooc.MainActivity" />
         </activity>
+        <activity
+            android:name=".ContextMenuActivity"
+            android:label="@string/title_activity_context_menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.hophin.shfy.androidmooc.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SubMenuActivity"
+            android:label="@string/title_activity_sub_menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.hophin.shfy.androidmooc.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

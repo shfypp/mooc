@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info_scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -253,6 +254,7 @@
                 android:onClick="useViewFlipper"
                 android:text="@string/view_flipper_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -261,6 +263,7 @@
                 android:onClick="useGalleryAndImageSwitcher"
                 android:text="Gallery"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -271,9 +274,9 @@
                 android:textAllCaps="false" />
 
 
-
         </LinearLayout>
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -286,6 +289,7 @@
                 android:onClick="useToast"
                 android:text="@string/toast_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -294,6 +298,7 @@
                 android:onClick="useDialog"
                 android:text="@string/dialog_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -303,6 +308,31 @@
                 android:text="Notification"
                 android:textAllCaps="false" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useContextMenu"
+                android:text="@string/menu_context"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useSubMenu"
+                android:text="@string/menu_sub_button"
+                android:textAllCaps="false" />
 
 
         </LinearLayout>

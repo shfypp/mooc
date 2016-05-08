@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton device_android;
     private RadioButton device_mac;
     private Spinner spinner;
+    private ScrollView scrollView;
 
     public MainActivity() {
         this.context = this;
@@ -54,16 +56,16 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //跑马灯TextView的实现
-        mMarqueeText= (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
+        mMarqueeText = (MarqueeText) findViewById(R.id.pao_ma_deng_text_view);
         mMarqueeText.setText(Article.articleContent[0]);
 
         //自动补全TextView的实现
         //1.初始化控件
-        mAutoCompleteTextView= (AutoCompleteTextView) findViewById(R.id.key_words_ac_text_view);
+        mAutoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.key_words_ac_text_view);
         //2.初始化数据
-        List<String> data=new ArrayList<String>(Arrays.asList(Article.keyWords));
+        List<String> data = new ArrayList<String>(Arrays.asList(Article.keyWords));
         //3.创建适配器
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
                 data);
@@ -71,14 +73,14 @@ public class MainActivity extends AppCompatActivity {
         mAutoCompleteTextView.setAdapter(adapter);
 
         //多输入自动补全TextView的实现
-        mMultiAutoCompleteTextView= (MultiAutoCompleteTextView) findViewById(R.id.key_words_mac_text_view);
+        mMultiAutoCompleteTextView = (MultiAutoCompleteTextView) findViewById(R.id.key_words_mac_text_view);
         mMultiAutoCompleteTextView.setAdapter(adapter);
         //设置以逗号为分隔符
         mMultiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 
         //ToggleButton的实现
-        mImageView= (ImageView) findViewById(R.id.light_image_view);
-        mToggleButton= (ToggleButton) findViewById(R.id.light_switch_tg_button);
+        mImageView = (ImageView) findViewById(R.id.light_image_view);
+        mToggleButton = (ToggleButton) findViewById(R.id.light_switch_tg_button);
 
         mToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -89,33 +91,33 @@ public class MainActivity extends AppCompatActivity {
 
         //CheckBox的实现
         mImageView2 = (ImageView) findViewById(R.id.light_image_view_2);
-        mCheckBox= (CheckBox) findViewById(R.id.light_image_show_check_box);
+        mCheckBox = (CheckBox) findViewById(R.id.light_image_show_check_box);
         mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mImageView2.setVisibility(isChecked?View.VISIBLE:View.INVISIBLE);
+                mImageView2.setVisibility(isChecked ? View.VISIBLE : View.INVISIBLE);
             }
         });
 
         //RadioButton的实现
-        sex= (RadioGroup) findViewById(R.id.sex_radio_group);
-        sex_man= (RadioButton) findViewById(R.id.sex_man_radio_button);
-        sex_woman= (RadioButton) findViewById(R.id.sex_woman_radio_button);
+        sex = (RadioGroup) findViewById(R.id.sex_radio_group);
+        sex_man = (RadioButton) findViewById(R.id.sex_man_radio_button);
+        sex_woman = (RadioButton) findViewById(R.id.sex_woman_radio_button);
 
-        device= (RadioGroup) findViewById(R.id.device_radio_group);
-        device_android= (RadioButton) findViewById(R.id.device_android_radio_button);
-        device_mac= (RadioButton) findViewById(R.id.device_mac_radio_button);
+        device = (RadioGroup) findViewById(R.id.device_radio_group);
+        device_android = (RadioButton) findViewById(R.id.device_android_radio_button);
+        device_mac = (RadioButton) findViewById(R.id.device_mac_radio_button);
 
         //监听RadioGroup
         sex.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId){
+                switch (checkedId) {
                     case R.id.sex_man_radio_button:
-                        Toast.makeText(context,"sex_man is selected!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "sex_man is selected!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.sex_woman_radio_button:
-                        Toast.makeText(context,"sex_woman is selected!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "sex_woman is selected!", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
@@ -125,24 +127,24 @@ public class MainActivity extends AppCompatActivity {
         device_android.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked ) {
-                    Toast.makeText(context,"device_android is selected!",Toast.LENGTH_SHORT).show();
+                if (isChecked) {
+                    Toast.makeText(context, "device_android is selected!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         device_mac.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    Toast.makeText(context,"device_mac is selected!",Toast.LENGTH_SHORT).show();
+                if (isChecked) {
+                    Toast.makeText(context, "device_mac is selected!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         //Spinner实现下拉列表
-        spinner= (Spinner) findViewById(R.id.cities_spinner);
+        spinner = (Spinner) findViewById(R.id.cities_spinner);
         //准备数据
-        final String[] arrayData={
+        final String[] arrayData = {
                 "==PleaseSelect==",
                 "option1",
                 "option2",
@@ -150,9 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 "option4",
                 "option5"
         };
-        List<String> listData=Arrays.asList(arrayData);
+        List<String> listData = Arrays.asList(arrayData);
         //封装数据到适配器
-        ArrayAdapter spinnerAdapter=new ArrayAdapter(
+        ArrayAdapter spinnerAdapter = new ArrayAdapter(
                 context,
                 android.R.layout.simple_spinner_item,
                 listData
@@ -166,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //添加判断，默认选择0位置时不弹出Toast
-                if(position!=0) {
+                if (position != 0) {
                     Toast.makeText(context, arrayData[position], Toast.LENGTH_SHORT).show();
                 }
             }
@@ -178,6 +180,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //获取ScrollView并添加ContextMenu
+        scrollView = (ScrollView) findViewById(R.id.info_scroll_view);
+        //注册上下文菜单
+        this.registerForContextMenu(scrollView);
+
 
     }
 
@@ -185,6 +192,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        //动态添加菜单项
+        menu.add(1, 2, 102, "动态菜单项");
+        menu.add(1, 3, 103, "百度首页");
         return true;
     }
 
@@ -197,89 +207,154 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(context, "这里是系统设置", Toast.LENGTH_SHORT).show();
             return true;
         }
+        if (id == R.id.action_dime) {
+            Toast.makeText(context, "这里可以设置一个主题", Toast.LENGTH_SHORT).show();
+        }
+        if (id == 2) {
+            Toast.makeText(context, "这是一个动态添加的菜单项", Toast.LENGTH_SHORT).show();
+        }
+        //点击菜单项实现页面跳转
+        if (id == 3) {
+            Intent intent = new Intent(context, WebViewActivity.class);
+            item.setIntent(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
 
-    /**Response for button list_array**/
-    public void listArray(View view){
-        Intent intent=new Intent(context,ListArrayActivity.class);
-        startActivity(intent);
-    }
-
-    /**Response for button date_and_time_picker_button**/
-    public void dateTimePicker(View view){
-        Intent intent=new Intent(context,DateAndTimePickerActivity.class);
-        startActivity(intent);
-    }
-
-    /**Response for button grid_view_button**/
-    public void gridView(View view){
-        Intent intent=new Intent(context,GridViewActivity.class);
-        startActivity(intent);
-    }
-
-    /**Response for button progress_bar**/
-    public void progressBar(View view){
-        Intent intent=new Intent(context,ProgressBarActivity.class);
-        startActivity(intent);
-    }
-    /**Response for button web_view**/
-    public void webView(View view){
-        Intent intent=new Intent(context,WebViewActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_fragment_button**/
-    public void useFragment(View view){
-        Intent intent=new Intent(context,UseFragmentActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_view_pager button**/
-    public void useViewPager(View view){
-        Intent intent=new Intent(context,ViewPagerActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_view_pager2 button**/
-    public void useViewPager2(View view){
-        Intent intent=new Intent(context,ViewPager2Activity.class);
-        startActivity(intent);
-    }
-
-    /**Response for use_view_flipper_button**/
-    public void useViewFlipper(View view){
-        Intent intent=new Intent(context,ViewFlipperActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_gallery_and_image_switcher_button**/
-    public void useGalleryAndImageSwitcher(View view){
-        Intent intent=new Intent(context,GalleryActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_seek_bar_button**/
-    public void useSeekBar(View view){
-        Intent intent=new Intent(context,SeekBarActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_toast_button**/
-    public void useToast(View view){
-        Intent intent=new Intent(context,ToastActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_dialog_button**/
-    public void useDialog(View view){
-        Intent intent=new Intent(context,DialogActivity.class);
-        startActivity(intent);
-    }
-    /**Response for use_notification_button**/
-    public void useNotification(View view){
-        Intent intent=new Intent(context,NotificationActivity.class);
-        startActivity(intent);
-    }
 
 
 
+    /**
+     * Response for button list_array
+     **/
+    public void listArray(View view) {
+        Intent intent = new Intent(context, ListArrayActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for button date_and_time_picker_button
+     **/
+    public void dateTimePicker(View view) {
+        Intent intent = new Intent(context, DateAndTimePickerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for button grid_view_button
+     **/
+    public void gridView(View view) {
+        Intent intent = new Intent(context, GridViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for button progress_bar
+     **/
+    public void progressBar(View view) {
+        Intent intent = new Intent(context, ProgressBarActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for button web_view
+     **/
+    public void webView(View view) {
+        Intent intent = new Intent(context, WebViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_fragment_button
+     **/
+    public void useFragment(View view) {
+        Intent intent = new Intent(context, UseFragmentActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_view_pager button
+     **/
+    public void useViewPager(View view) {
+        Intent intent = new Intent(context, ViewPagerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_view_pager2 button
+     **/
+    public void useViewPager2(View view) {
+        Intent intent = new Intent(context, ViewPager2Activity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_view_flipper_button
+     **/
+    public void useViewFlipper(View view) {
+        Intent intent = new Intent(context, ViewFlipperActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_gallery_and_image_switcher_button
+     **/
+    public void useGalleryAndImageSwitcher(View view) {
+        Intent intent = new Intent(context, GalleryActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_seek_bar_button
+     **/
+    public void useSeekBar(View view) {
+        Intent intent = new Intent(context, SeekBarActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_toast_button
+     **/
+    public void useToast(View view) {
+        Intent intent = new Intent(context, ToastActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_dialog_button
+     **/
+    public void useDialog(View view) {
+        Intent intent = new Intent(context, DialogActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for use_notification_button
+     **/
+    public void useNotification(View view) {
+        Intent intent = new Intent(context, NotificationActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Response for button menu_context_button
+     */
+    public void useContextMenu(View view){
+        Intent intent = new Intent(context, ContextMenuActivity.class);
+        startActivity(intent);
+    }
+    /**
+     * Response for button menu_sub_button
+     */
+    public void useSubMenu(View view){
+        Intent intent = new Intent(context, SubMenuActivity.class);
+        startActivity(intent);
+    }
 
 
 

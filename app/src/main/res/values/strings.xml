@@ -53,4 +53,9 @@
     <string name="title_activity_notification">NotificationActivity</string>
     <string name="notification_send">发送通知</string>
     <string name="notification_dismiss">取消通知</string>
+    <string name="action_dime">主题</string>
+    <string name="menu_context">ContextMenu</string>
+    <string name="title_activity_context_menu">ContextMenuActivity</string>
+    <string name="menu_sub_button">SubMenu</string>
+    <string name="title_activity_sub_menu">SubMenuActivity</string>
 </resources>
