@@ -50,4 +50,7 @@
     <string name="dialog_mutual_choice">多选对话框</string>
     <string name="dialog_list">列表对话框</string>
     <string name="dialog_my">自定义对话框</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="notification_send">发送通知</string>
+    <string name="notification_dismiss">取消通知</string>
 </resources>

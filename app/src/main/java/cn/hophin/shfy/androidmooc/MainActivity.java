@@ -272,6 +272,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(context,DialogActivity.class);
         startActivity(intent);
     }
+    /**Response for use_notification_button**/
+    public void useNotification(View view){
+        Intent intent=new Intent(context,NotificationActivity.class);
+        startActivity(intent);
+    }
+
 
 
 
