@@ -355,6 +355,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(context, SubMenuActivity.class);
         startActivity(intent);
     }
+    /**
+     * Response for button menu_sub_button
+     */
+    public void useSharedPreferences(View view){
+        Intent intent = new Intent(context, SharedPreferencesActivity.class);
+        startActivity(intent);
+    }
+
 
 
 

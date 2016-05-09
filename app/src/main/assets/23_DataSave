@@ -1,0 +1,5 @@
+Android四种数据存储的方式：
+    1.  SharedPreferences
+    2.  SQLite
+    3.  Content Provider
+    4.  File
