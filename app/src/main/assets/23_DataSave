@@ -13,3 +13,6 @@ SQLite数据类型
     使用：
         SQLiteDatabase
         SQLiteOpenHelper
+SQLiteOpenHelper:
+    SQLiteDatabase的帮助类，用于管理数据库的创建和版本更新
+    一般是建立一个类继承他，并重写onCreate()和Upgrade()方法
