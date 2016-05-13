@@ -1,5 +1,6 @@
 package cn.hophin.shfy.androidmooc;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -369,6 +370,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(context, SQLiteActivity.class);
         startActivity(intent);
     }
+    /**
+     * Response for button file_button
+     */
+    public void useFile(View view){
+        Intent intent = new Intent(context, FileActivity.class);
+        startActivity(intent);
+    }
+
 
 
 

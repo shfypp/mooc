@@ -61,4 +61,9 @@
     <string name="title_activity_shared_preferences">SharedPreferencesActivity</string>
     <string name="button_sqlite">SQLite</string>
     <string name="title_activity_sqlite">SQLiteActivity</string>
+    <string name="button_file">File</string>
+    <string name="title_activity_file">FileActivity</string>
+    <string name="label_file_name">Input a file name</string>
+    <string name="save_file_button">Save</string>
+    <string name="success_save_file">File save successfull!</string>
 </resources>
