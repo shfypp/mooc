@@ -362,6 +362,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(context, SharedPreferencesActivity.class);
         startActivity(intent);
     }
+    /**
+     * Response for button sqlite_button
+     */
+    public void useSQLite(View view){
+        Intent intent = new Intent(context, SQLiteActivity.class);
+        startActivity(intent);
+    }
+
 
 
 

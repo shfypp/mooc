@@ -59,4 +59,6 @@
     <string name="menu_sub_button">SubMenu</string>
     <string name="title_activity_sub_menu">SubMenuActivity</string>
     <string name="title_activity_shared_preferences">SharedPreferencesActivity</string>
+    <string name="button_sqlite">SQLite</string>
+    <string name="title_activity_sqlite">SQLiteActivity</string>
 </resources>

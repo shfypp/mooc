@@ -3,3 +3,13 @@ Android四种数据存储的方式：
     2.  SQLite
     3.  Content Provider
     4.  File
+SQLite数据类型
+    NULL        空
+    INTEGER     整型
+    REAL        浮点型
+    TEXT        字符串型
+    BLOB        二进制
+
+    使用：
+        SQLiteDatabase
+        SQLiteOpenHelper

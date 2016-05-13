@@ -322,6 +322,7 @@
                 android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:onClick="useContextMenu"
+                android:singleLine="true"
                 android:text="@string/menu_context"
                 android:textAllCaps="false" />
 
@@ -331,17 +332,37 @@
                 android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:onClick="useSubMenu"
+                android:singleLine="true"
                 android:text="@string/menu_sub_button"
                 android:textAllCaps="false" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="1dp"
                 android:layout_weight="1"
                 android:onClick="useSharedPreferences"
+                android:singleLine="true"
                 android:text="SharedPreference"
                 android:textAllCaps="false" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useSQLite"
+                android:singleLine="true"
+                android:text="@string/button_sqlite"
+                android:textAllCaps="false" />
 
 
         </LinearLayout>
