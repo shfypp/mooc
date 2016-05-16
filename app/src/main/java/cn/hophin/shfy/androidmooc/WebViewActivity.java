@@ -42,7 +42,7 @@ public class WebViewActivity extends AppCompatActivity {
                 //返回值为True时控制网页在WebView中打开
                 //返回值为False时控制网页在第三方或者系统浏览器中打开
                 return true;
-//                return super.shouldOverrideUrlLoading(view, url);
+//                return super.shouldOverrideUrlLoading(view, url);w
             }
         });
         //启用支持JavaScript

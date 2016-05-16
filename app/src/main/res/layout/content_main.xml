@@ -372,6 +372,16 @@
                 android:singleLine="true"
                 android:text="@string/button_file"
                 android:textAllCaps="false" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:onClick="useCamera"
+                android:singleLine="true"
+                android:text="@string/button_camera"
+                android:textAllCaps="false" />
+
 
 
 

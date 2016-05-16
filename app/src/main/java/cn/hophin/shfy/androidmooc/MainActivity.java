@@ -377,6 +377,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(context, FileActivity.class);
         startActivity(intent);
     }
+    /**
+     * Response for button camera_button
+     */
+    public void useCamera(View view){
+        Intent intent = new Intent(context, CameraActivity.class);
+        startActivity(intent);
+    }
+
 
 
 

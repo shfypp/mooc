@@ -66,4 +66,7 @@
     <string name="label_file_name">Input a file name</string>
     <string name="save_file_button">Save</string>
     <string name="success_save_file">File save successfull!</string>
+    <string name="button_camera">Camera</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="start_camera_button">StartCamera</string>
 </resources>
